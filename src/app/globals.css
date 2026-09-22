@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-beige: #eae2d3;
+  --color-brown: #70583a;
+  --color-pink: #caa3b6;
+  --color-blue: #afc7d3;
+  --color-dark-blue: #2e445b;
+
+  /* Aliases to align existing components to new palette seamlessly */
+  --color-cream: #eae2d3;
+  --color-sand: #dfd5c4;
+  --color-blush: #caa3b6;
+  --color-forest: #2e445b;
+  --color-forest-dark: #223447;
+  --color-gold: #70583a;
+  --color-ink: #2e445b;
+
+  --font-script: var(--font-script), cursive;
+  --font-body: var(--font-body), sans-serif;
+  --font-heading: var(--font-body), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-beige);
+  color: var(--color-dark-blue);
+  font-family: var(--font-body), sans-serif;
+}
+
+/* Ensure cursor pointer on all clickable / interactive elements */
+button,
+a,
+select,
+summary,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+}
+
+/* Custom Slim Scrollbar matching Vita Eterna luxury theme */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #caa3b6 #eae2d3;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eae2d3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #caa3b6;
+  border-radius: 9999px;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2e445b;
+}
+
+/* Script font utility */
+.font-script {
+  font-family: var(--font-script), cursive;
+}
+
+/* Smooth luxury section entrance animations on scroll */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(36px) scale(0.985);
+  filter: blur(5px);
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+              filter 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform, filter;
+}
+
+.reveal-section.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+
+
