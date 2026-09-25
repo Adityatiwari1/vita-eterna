@@ -17,30 +17,14 @@ export default function Home() {
       <Navbar />
       <main className="overflow-hidden">
         <Hero />
-        <ScrollReveal>
-          <InfoStrip />
-        </ScrollReveal>
-        <ScrollReveal>
-          <DoctorProfile />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Philosophy />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Services />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Gallery />
-        </ScrollReveal>
-        <ScrollReveal>
-          <OurWork />
-        </ScrollReveal>
-        <ScrollReveal>
-          <AppointmentForm />
-        </ScrollReveal>
-        <ScrollReveal>
-          <FAQ />
-        </ScrollReveal>
+        <InfoStrip />
+        <DoctorProfile />
+        <Philosophy />
+        <Services />
+        <Gallery />
+        <OurWork />
+        <AppointmentForm />
+        <FAQ />
       </main>
       <Footer />
     </>

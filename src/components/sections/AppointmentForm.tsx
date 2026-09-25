@@ -6,6 +6,7 @@ import ThemedCalendar from "@/components/ui/ThemedCalendar";
 import TimerSlotPicker, { ONE_HOUR_SLOTS, isSlotDisabledForDate } from "@/components/ui/TimerSlotPicker";
 import ThemedDropdown from "@/components/ui/ThemedDropdown";
 import { submitConsultationBooking } from "@/app/actions/booking";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const treatmentOptions = [
   "Facial Balancing & Harmonisation (Botox, Fillers, Threads)",
@@ -138,41 +139,46 @@ export default function AppointmentForm() {
   };
 
   return (
-    <section id="appointment" className="relative bg-beige py-16 sm:py-24 px-4 sm:px-6 border-t border-dark-blue/10">
+    <section id="appointment" className="relative bg-beige py-16 sm:py-24 px-4 sm:px-6 border-t border-dark-blue/10 overflow-hidden">
       <div className="mx-auto max-w-4xl">
-        <div className="text-center">
-          <SectionLabel>Book an Appointment</SectionLabel>
-          <h2 className="text-3xl font-semibold tracking-tight text-dark-blue sm:text-4xl">
-            Request an Appointment with Us
-          </h2>
-          <p className="mt-3 text-sm text-dark-blue/70">
-            Rooted in clinical excellence. We look forward to welcoming you to Vita Eterna.
-          </p>
-        </div>
+        <ScrollReveal from="top" delay={50}>
+          <div className="text-center">
+            <SectionLabel>Book an Appointment</SectionLabel>
+            <h2 className="text-3xl font-semibold tracking-tight text-dark-blue sm:text-4xl">
+              Request an Appointment with Us
+            </h2>
+            <p className="mt-3 text-sm text-dark-blue/70">
+              Rooted in clinical excellence. We look forward to welcoming you to Vita Eterna.
+            </p>
+          </div>
+        </ScrollReveal>
 
         {status === "success" && (
-          <div className="mt-8 rounded-3xl bg-dark-blue p-8 sm:p-12 text-center text-beige shadow-xl transition-all animate-in fade-in zoom-in-95">
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-pink/20 text-pink text-3xl font-bold">
-              ✓
+          <ScrollReveal from="zoom" delay={100}>
+            <div className="mt-8 rounded-3xl bg-dark-blue p-8 sm:p-12 text-center text-beige shadow-xl transition-all animate-in fade-in zoom-in-95">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-pink/20 text-pink text-3xl font-bold">
+                ✓
+              </div>
+              <h3 className="font-script text-4xl text-pink">Thank You</h3>
+              <p className="mt-3 text-sm text-beige/90 leading-relaxed max-w-lg mx-auto">
+                {feedbackMessage}
+              </p>
+              <button
+                onClick={() => setStatus("idle")}
+                className="mt-6 inline-flex rounded-full bg-pink px-8 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-white hover:bg-pink/90 transition-all shadow-md"
+              >
+                Book Another Appointment
+              </button>
             </div>
-            <h3 className="font-script text-4xl text-pink">Thank You</h3>
-            <p className="mt-3 text-sm text-beige/90 leading-relaxed max-w-lg mx-auto">
-              {feedbackMessage}
-            </p>
-            <button
-              onClick={() => setStatus("idle")}
-              className="mt-6 inline-flex rounded-full bg-pink px-8 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-white hover:bg-pink/90 transition-all shadow-md"
-            >
-              Book Another Appointment
-            </button>
-          </div>
+          </ScrollReveal>
         )}
 
         {status !== "success" && (
-          <form
-            onSubmit={handleSubmit}
-            className="mt-10 sm:mt-12 rounded-3xl border border-dark-blue/10 bg-white/75 backdrop-blur-md p-4 sm:p-8 md:p-12 shadow-xl shadow-dark-blue/5 w-full max-w-full"
-          >
+          <ScrollReveal from="bottom" delay={150}>
+            <form
+              onSubmit={handleSubmit}
+              className="mt-10 sm:mt-12 rounded-3xl border border-dark-blue/10 bg-white/75 backdrop-blur-md p-4 sm:p-8 md:p-12 shadow-xl shadow-dark-blue/5 w-full max-w-full"
+            >
             {status === "error" && (
               <div className="mb-6 sm:mb-8 rounded-2xl bg-red-50 border border-red-200 p-4 text-xs sm:text-sm text-red-700">
                 {feedbackMessage}
@@ -323,6 +329,7 @@ export default function AppointmentForm() {
               </button>
             </div>
           </form>
+        </ScrollReveal>
         )}
       </div>
     </section>

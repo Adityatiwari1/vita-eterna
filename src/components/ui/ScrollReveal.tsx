@@ -2,15 +2,19 @@
 
 import { useEffect, useRef, ReactNode } from "react";
 
+export type RevealDirection = "left" | "right" | "bottom" | "top" | "zoom";
+
 interface ScrollRevealProps {
   children: ReactNode;
   className?: string;
+  from?: RevealDirection;
   delay?: number;
 }
 
 export default function ScrollReveal({
   children,
   className = "",
+  from = "bottom",
   delay = 0,
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -40,8 +44,8 @@ export default function ScrollReveal({
       },
       {
         root: null,
-        rootMargin: "0px 0px -60px 0px",
-        threshold: 0.1,
+        rootMargin: "0px 0px -40px 0px",
+        threshold: 0.08,
       }
     );
 
@@ -52,8 +56,23 @@ export default function ScrollReveal({
     };
   }, [delay]);
 
+  const fromClass =
+    from === "left"
+      ? "reveal-from-left"
+      : from === "right"
+      ? "reveal-from-right"
+      : from === "top"
+      ? "reveal-from-top"
+      : from === "zoom"
+      ? "reveal-from-zoom"
+      : "reveal-from-bottom";
+
   return (
-    <div ref={ref} className={`reveal-section ${className}`}>
+    <div
+      ref={ref}
+      className={`reveal-item ${fromClass} ${className}`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
       {children}
     </div>
   );

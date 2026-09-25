@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-beige: #eae2d3;
+  --color-beige: #fdfcfb;
   --color-brown: #70583a;
   --color-pink: #caa3b6;
   --color-blue: #afc7d3;
   --color-dark-blue: #2e445b;
 
   /* Aliases to align existing components to new palette seamlessly */
-  --color-cream: #eae2d3;
-  --color-sand: #dfd5c4;
+  --color-cream: #fdfcfb;
+  --color-sand: #f5f2eb;
   --color-blush: #caa3b6;
   --color-forest: #2e445b;
   --color-forest-dark: #223447;
@@ -48,7 +48,7 @@ input[type="radio"] {
 /* Custom Slim Scrollbar matching Vita Eterna luxury theme */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #caa3b6 #eae2d3;
+  scrollbar-color: #caa3b6 #fdfcfb;
 }
 
 ::-webkit-scrollbar {
@@ -57,7 +57,7 @@ input[type="radio"] {
 }
 
 ::-webkit-scrollbar-track {
-  background: #eae2d3;
+  background: #fdfcfb;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -75,21 +75,137 @@ input[type="radio"] {
   font-family: var(--font-script), cursive;
 }
 
-/* Smooth luxury section entrance animations on scroll */
+/* Smooth luxury section entrance animations on scroll (No blur, smooth and slow) */
 .reveal-section {
   opacity: 0;
-  transform: translateY(36px) scale(0.985);
-  filter: blur(5px);
-  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
-              filter 0.85s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform, filter;
+  transform: translateY(28px);
+  transition: opacity 1.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
 
 .reveal-section.revealed {
   opacity: 1;
-  transform: translateY(0) scale(1);
-  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* Multi-directional Scroll Reveal for Section Elements (No blur, slow and silky) */
+.reveal-item {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 1.35s;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-from-left {
+  transform: translateX(-44px);
+}
+
+.reveal-from-right {
+  transform: translateX(44px);
+}
+
+.reveal-from-bottom {
+  transform: translateY(34px);
+}
+
+.reveal-from-top {
+  transform: translateY(-30px);
+}
+
+.reveal-from-zoom {
+  transform: scale(0.96) translateY(20px);
+}
+
+.reveal-item.revealed {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Hero Section Page-Load Entrance Animations (No blur, slow and elegant) */
+@keyframes heroSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroSlideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroSlideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(48px) scale(0.985);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes heroSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-animate-brand {
+  animation: heroSlideLeft 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+.hero-animate-logo {
+  animation: heroSlideDown 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+}
+
+.hero-animate-copy {
+  animation: heroSlideLeft 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+}
+
+.hero-animate-btn-1 {
+  animation: heroSlideUp 1.25s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both;
+}
+
+.hero-animate-btn-2 {
+  animation: heroSlideUp 1.25s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both;
+}
+
+.hero-animate-image {
+  animation: heroSlideRight 1.65s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-animate-brand,
+  .hero-animate-logo,
+  .hero-animate-copy,
+  .hero-animate-btn-1,
+  .hero-animate-btn-2,
+  .hero-animate-image,
+  .reveal-item,
+  .reveal-section {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 

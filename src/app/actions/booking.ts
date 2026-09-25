@@ -44,20 +44,20 @@ export async function submitConsultationBooking(data: BookingFormData) {
         <meta charset="utf-8">
         <title>New Consultation Request - Vita Eterna</title>
         <style>
-          body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #eae2d3; margin: 0; padding: 24px; color: #2e445b; }
-          .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(46, 68, 91, 0.08); border: 1px solid #dfd5c4; }
-          .header { background-color: #2e445b; padding: 36px 30px; text-align: center; color: #eae2d3; }
+          body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #fdfcfb; margin: 0; padding: 24px; color: #2e445b; }
+          .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(46, 68, 91, 0.08); border: 1px solid #f0ece4; }
+          .header { background-color: #2e445b; padding: 36px 30px; text-align: center; color: #fdfcfb; }
           .logo-text { font-family: 'Georgia', serif; font-size: 32px; letter-spacing: 2px; color: #ffffff; margin: 0; font-style: italic; }
           .sub-brand { font-size: 11px; text-transform: uppercase; letter-spacing: 4px; color: #caa3b6; margin-top: 6px; }
           .content { padding: 36px 32px; background-color: #ffffff; }
-          .badge { display: inline-block; background-color: #eae2d3; color: #70583a; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; padding: 6px 14px; border-radius: 20px; margin-bottom: 20px; }
+          .badge { display: inline-block; background-color: #fdfcfb; color: #70583a; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; padding: 6px 14px; border-radius: 20px; margin-bottom: 20px; }
           h2 { color: #2e445b; font-size: 20px; margin-top: 0; margin-bottom: 16px; }
           table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-          td { padding: 12px 14px; font-size: 14px; border-bottom: 1px solid #eae2d3; }
-          td.label { color: #70583a; font-weight: 600; width: 35%; background-color: #faf8f5; }
+          td { padding: 12px 14px; font-size: 14px; border-bottom: 1px solid #f0ece4; }
+          td.label { color: #70583a; font-weight: 600; width: 35%; background-color: #fdfcfb; }
           td.val { color: #2e445b; font-weight: 500; }
-          .concern-box { background-color: #faf8f5; border-left: 4px solid #caa3b6; padding: 16px; border-radius: 4px; margin-top: 20px; font-size: 14px; line-height: 1.6; color: #2e445b; }
-          .footer { background-color: #eae2d3; padding: 20px; text-align: center; font-size: 12px; color: #70583a; }
+          .concern-box { background-color: #fdfcfb; border-left: 4px solid #caa3b6; padding: 16px; border-radius: 4px; margin-top: 20px; font-size: 14px; line-height: 1.6; color: #2e445b; }
+          .footer { background-color: #fdfcfb; padding: 20px; text-align: center; font-size: 12px; color: #70583a; }
         </style>
       </head>
       <body>
@@ -128,17 +128,17 @@ export async function submitConsultationBooking(data: BookingFormData) {
         <meta charset="utf-8">
         <title>Your Consultation Request - Vita Eterna</title>
         <style>
-          body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #eae2d3; margin: 0; padding: 24px; color: #2e445b; }
-          .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(46, 68, 91, 0.08); border: 1px solid #dfd5c4; }
-          .header { background-color: #2e445b; padding: 36px 30px; text-align: center; color: #eae2d3; }
+          body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #fdfcfb; margin: 0; padding: 24px; color: #2e445b; }
+          .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(46, 68, 91, 0.08); border: 1px solid #f0ece4; }
+          .header { background-color: #2e445b; padding: 36px 30px; text-align: center; color: #fdfcfb; }
           .logo-text { font-family: 'Georgia', serif; font-size: 32px; letter-spacing: 2px; color: #ffffff; margin: 0; font-style: italic; }
           .sub-brand { font-size: 11px; text-transform: uppercase; letter-spacing: 4px; color: #caa3b6; margin-top: 6px; }
           .content { padding: 36px 32px; background-color: #ffffff; line-height: 1.6; }
           h2 { color: #2e445b; font-size: 22px; margin-top: 0; margin-bottom: 14px; }
           p { font-size: 14px; color: #4a5568; }
-          .highlight-card { background-color: #faf8f5; border: 1px solid #eae2d3; border-radius: 12px; padding: 20px; margin: 24px 0; }
+          .highlight-card { background-color: #fdfcfb; border: 1px solid #f0ece4; border-radius: 12px; padding: 20px; margin: 24px 0; }
           .btn { display: inline-block; background-color: #2e445b; color: #ffffff !important; text-decoration: none; padding: 12px 28px; border-radius: 30px; font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 16px; }
-          .footer { background-color: #eae2d3; padding: 20px; text-align: center; font-size: 12px; color: #70583a; }
+          .footer { background-color: #fdfcfb; padding: 20px; text-align: center; font-size: 12px; color: #70583a; }
         </style>
       </head>
       <body>
