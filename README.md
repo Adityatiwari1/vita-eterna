@@ -22,7 +22,6 @@
   - Custom themed treatment selector with full mobile text wrapping.
   - Real-time confirmation and notification emails dispatched via Nodemailer with rich branded HTML templates.
 - **Mobile-First Experience**:
-  - Horizontal snap carousel for the "Hospital-Grade Hygiene & Treatment Suites" gallery.
   - Mobile-responsive hero layout prioritizing visual artwork directly under the clinic insignia.
   - Zero horizontal blowout on small viewports with strict overflow containment.
 - **Enterprise SEO & Structured Data**:
@@ -71,7 +70,6 @@ vita-eterna/
 │       │   ├── Services.tsx    # Treatment offerings & procedures
 │       │   ├── DoctorProfile.tsx # Dr. Rishi's background and credentials
 │       │   ├── OurWork.tsx     # Before & after clinical transformations
-│       │   ├── Gallery.tsx     # Treatment suites horizontal snap-scroll on mobile
 │       │   ├── AppointmentForm.tsx # Consultation booking form
 │       │   ├── FAQ.tsx         # Butter-smooth accordion FAQ
 │       │   └── Location.tsx    # Clinic contact information and map reference

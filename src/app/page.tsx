@@ -5,7 +5,6 @@ import InfoStrip from "@/components/sections/InfoStrip";
 import DoctorProfile from "@/components/sections/DoctorProfile";
 import Philosophy from "@/components/sections/Philosophy";
 import Services from "@/components/sections/Services";
-import Gallery from "@/components/sections/Gallery";
 import OurWork from "@/components/sections/OurWork";
 import AppointmentForm from "@/components/sections/AppointmentForm";
 import FAQ from "@/components/sections/FAQ";
@@ -21,7 +20,6 @@ export default function Home() {
         <DoctorProfile />
         <Philosophy />
         <Services />
-        <Gallery />
         <OurWork />
         <AppointmentForm />
         <FAQ />
