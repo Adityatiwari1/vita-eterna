@@ -29,6 +29,9 @@ export default function ScrollReveal({
       return;
     }
 
+    // If already revealed once, keep revealed and do not hide
+    if (el.classList.contains("revealed")) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -44,8 +47,8 @@ export default function ScrollReveal({
       },
       {
         root: null,
-        rootMargin: "0px 0px -40px 0px",
-        threshold: 0.08,
+        rootMargin: "40px 0px 40px 0px",
+        threshold: 0.01,
       }
     );
 
@@ -71,7 +74,6 @@ export default function ScrollReveal({
     <div
       ref={ref}
       className={`reveal-item ${fromClass} ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
     >
       {children}
     </div>

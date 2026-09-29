@@ -4,6 +4,7 @@ import Hero from "@/components/sections/Hero";
 import InfoStrip from "@/components/sections/InfoStrip";
 import DoctorProfile from "@/components/sections/DoctorProfile";
 import Philosophy from "@/components/sections/Philosophy";
+import Certificates from "@/components/sections/Certificates";
 import Services from "@/components/sections/Services";
 import OurWork from "@/components/sections/OurWork";
 import AppointmentForm from "@/components/sections/AppointmentForm";
@@ -19,6 +20,7 @@ export default function Home() {
         <InfoStrip />
         <DoctorProfile />
         <Philosophy />
+        <Certificates />
         <Services />
         <OurWork />
         <AppointmentForm />

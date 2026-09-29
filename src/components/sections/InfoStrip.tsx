@@ -4,7 +4,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 const info = [
   {
     label: "Address",
-    value: "Inside Healthmaxx Hospital, Sunny Commercial Complex, Kharar 140901",
+    value: "SCO- 23 and 24, Sunny Commercial Complex, Sector 125, Sunny Enclave, Kharar, Punjab 140301",
     from: "left" as const,
     delay: 50,
   },
@@ -41,12 +41,12 @@ export default function InfoStrip() {
               {item.label === "Reservations" ? (
                 <a
                   href="tel:+919517736935"
-                  className="mt-3 block text-lg font-semibold text-white transition-colors hover:text-pink"
+                  className="mt-3 block text-base sm:text-lg font-semibold text-white transition-colors hover:text-pink leading-snug"
                 >
                   {item.value}
                 </a>
               ) : (
-                <p className="mt-3 text-lg font-semibold text-white">
+                <p className="mt-3 text-base sm:text-lg font-semibold text-white leading-snug">
                   {item.value}
                 </p>
               )}

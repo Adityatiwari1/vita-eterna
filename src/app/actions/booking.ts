@@ -163,7 +163,7 @@ export async function submitConsultationBooking(data: BookingFormData) {
             <p style="font-size: 13px; color: #718096;">If you have any immediate questions or need to reschedule, you can reach us directly at <a href="tel:+919517736935" style="color: #2e445b; font-weight: 600;">+91 95177 36935</a>.</p>
           </div>
           <div class="footer">
-            Vita Eterna Aesthetics &bull; Inside Healthmaxx Hospital, Sunny Commercial Complex, Kharar 140901
+            Vita Eterna Aesthetics &bull; SCO- 23 and 24, Sunny Commercial Complex, Sector 125, Sunny Enclave, Kharar, Punjab 140301
           </div>
         </div>
       </body>

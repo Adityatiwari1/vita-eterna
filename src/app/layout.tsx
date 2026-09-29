@@ -116,10 +116,10 @@ const jsonLd = {
   priceRange: "$$$",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Inside Healthmaxx Hospital, Sunny Commercial Complex",
+    streetAddress: "SCO- 23 and 24, Sunny Commercial Complex, Sector 125, Sunny Enclave",
     addressLocality: "Kharar",
     addressRegion: "Punjab",
-    postalCode: "140901",
+    postalCode: "140301",
     addressCountry: "IN",
   },
   geo: {

@@ -7,7 +7,7 @@ const info = [
   { label: "Email", value: "support@heallthmaxx.com", href: "mailto:support@heallthmaxx.com", from: "right" as const, delay: 250 },
   {
     label: "Address",
-    value: "Inside Healthmaxx Hospital, Sunny Commercial Complex, Kharar 140901",
+    value: "SCO- 23 and 24, Sunny Commercial Complex, Sector 125, Sunny Enclave, Kharar, Punjab 140301",
     from: "right" as const,
     delay: 350,
   },

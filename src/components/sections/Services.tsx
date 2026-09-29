@@ -23,8 +23,8 @@ const categories: TreatmentCategory[] = [
       "Biostimulators (Sculptra / Radiesse)",
       "Liquid Rhinoplasty",
     ],
-    imageSrc: undefined, // Add image path here, e.g. "/services/facial-balancing.jpg"
-    imageAlt: "Facial Balancing & Harmonisation",
+    imageSrc: "/services/facial-balancing.png",
+    imageAlt: "Facial Balancing & Harmonisation Treatments",
   },
   {
     id: "skin-rejuvenation",
@@ -39,8 +39,8 @@ const categories: TreatmentCategory[] = [
       "Clinical Chemical Peels",
       "IPL Photo Facial",
     ],
-    imageSrc: undefined, // Add image path here
-    imageAlt: "Skin Rejuvenation Treatments",
+    imageSrc: "/services/skin-rejuvenation.png",
+    imageAlt: "Skin Rejuvenation & Clinical Peels",
   },
   {
     id: "iv-therapy",
@@ -52,7 +52,7 @@ const categories: TreatmentCategory[] = [
       "Antioxidant & Glutathione Radiance Drips",
       "Energy, Hydration & Immune Boost Formulations",
     ],
-    imageSrc: undefined, // Add image path here
+    imageSrc: "/services/iv-therapy.jpg",
     imageAlt: "IV Therapy & Wellness Lounge",
   },
   {
@@ -64,8 +64,8 @@ const categories: TreatmentCategory[] = [
       "Laser Hair Removal (Medical IPL)",
       "Hair Loss Management, Hair PRP, GFC & Exosomes",
     ],
-    imageSrc: undefined, // Add image path here
-    imageAlt: "Hair Management Treatments",
+    imageSrc: "/services/hair-management.png",
+    imageAlt: "Hair Management & PRP Therapy",
   },
 ];
 
