@@ -6,8 +6,8 @@ import Image from "next/image";
 
 const links = [
   { label: "Philosophy", href: "#philosophy" },
+  { label: "Credentials", href: "#credentials" },
   { label: "Treatments", href: "#services" },
-  { label: "Our Work", href: "#our-work" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#appointment" },
 ];

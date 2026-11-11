@@ -1,4 +1,4 @@
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
+import Image from "next/image";
 import SectionLabel from "@/components/ui/SectionLabel";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
@@ -7,7 +7,15 @@ export default function DoctorProfile() {
     <section id="doctor" className="bg-beige/40 py-16 sm:py-24 px-4 sm:px-6 border-t border-dark-blue/10 overflow-hidden">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
         <ScrollReveal from="left" delay={50} className="w-full">
-          <ImagePlaceholder label="Dr Rishi Photography Placeholder" ratio="aspect-[4/5]" />
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-xl border border-dark-blue/10 bg-beige">
+            <Image
+              src="/Dr-Rishi.png"
+              alt="Dr Rishi - Aesthetic Physician & Founder at Vita Eterna"
+              fill
+              sizes="(max-width: 640px) 92vw, (max-width: 1024px) 80vw, 540px"
+              className="object-cover object-top transition-transform duration-700 hover:scale-105"
+            />
+          </div>
         </ScrollReveal>
         <ScrollReveal from="right" delay={150}>
           <div>

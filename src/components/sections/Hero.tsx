@@ -75,7 +75,7 @@ export default function Hero() {
                 height={2453}
                 priority
                 className="w-full h-auto object-contain select-none transition-transform duration-500 hover:scale-[1.005]"
-                sizes="(max-width: 1024px) 100vw, 60vw"
+                sizes="(max-width: 640px) 95vw, (max-width: 1024px) 90vw, 650px"
               />
             </div>
           </div>

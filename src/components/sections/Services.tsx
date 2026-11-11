@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 type TreatmentCategory = {
@@ -130,10 +131,12 @@ export default function Services() {
                 <div className="w-full lg:w-5/12">
                   {category.imageSrc ? (
                     <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-beige/15 shadow-xl group">
-                      <img
+                      <Image
                         src={category.imageSrc}
                         alt={category.imageAlt || category.title}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 420px"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-dark-blue/80 via-transparent to-transparent opacity-60" />
                       <span className="absolute bottom-3 left-4 text-xs font-medium text-beige/90 tracking-wide">
