@@ -14,6 +14,8 @@ type Certificate = {
   credential: string;
   imageSrc: string;
   imageAlt: string;
+  imageWidth: number;
+  imageHeight: number;
   delay: number;
 };
 
@@ -25,7 +27,9 @@ const certificates: Certificate[] = [
     issuer: "ILAMED & Indo-German Board (IGBAMS)",
     affiliation: "University Medicine Greifswald & ISAM",
     credential: "Postgraduate clinical fellowship in advanced aesthetic procedures and anti-aging medicine.",
-    imageSrc: "/certificates/3.png",
+    imageSrc: "/certificates/ifaam-fellowship-certificate.png",
+    imageWidth: 1792,
+    imageHeight: 2400,
     imageAlt: "International Fellowship in Aesthetic and Anti-Aging Medicine (IFAAM) - Dr. Rishi Mangat",
     delay: 100,
   },
@@ -36,7 +40,9 @@ const certificates: Certificate[] = [
     issuer: "ILAMED International",
     affiliation: "Endorsed by University Medicine Greifswald (Germany) & SUNY Buffalo (USA)",
     credential: "Certified Life Member recognized for excellence and proficiency in laser & aesthetic clinical practice.",
-    imageSrc: "/certificates/2.png",
+    imageSrc: "/certificates/ilamed-life-membership-certificate.png",
+    imageWidth: 1792,
+    imageHeight: 2400,
     imageAlt: "Institute of Laser & Aesthetic Medicine Life Membership - Dr. Rishi Mangat",
     delay: 200,
   },
@@ -47,7 +53,9 @@ const certificates: Certificate[] = [
     issuer: "ISAM & UIME",
     affiliation: "Union Internationale De Médecine Esthétique",
     credential: "Certified Life Member of the Indian Society of Aesthetic Medicine and international UIME body.",
-    imageSrc: "/certificates/1.png",
+    imageSrc: "/certificates/isam-life-membership-certificate.png",
+    imageWidth: 1792,
+    imageHeight: 2400,
     imageAlt: "Indian Society of Aesthetic Medicine Life Membership - Dr. Rishi Mangat",
     delay: 300,
   },
@@ -58,7 +66,9 @@ const certificates: Certificate[] = [
     issuer: "Indian Society of Mesotherapy (ISM)",
     affiliation: "Certified Clinical Member",
     credential: "Certified Life Member with clinical mastery in advanced mesotherapy and regenerative intradermal protocols.",
-    imageSrc: "/certificates/4.png",
+    imageSrc: "/certificates/ism-life-membership-certificate.png",
+    imageWidth: 1728,
+    imageHeight: 2448,
     imageAlt: "Indian Society of Mesotherapy Life Membership - Dr. Rishi Mangat",
     delay: 400,
   },
@@ -107,9 +117,10 @@ export default function Certificates() {
                   <Image
                     src={cert.imageSrc}
                     alt={cert.imageAlt}
-                    fill
+                    width={cert.imageWidth}
+                    height={cert.imageHeight}
                     sizes="(max-width: 640px) 95vw, (max-width: 1024px) 48vw, 280px"
-                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
                   {/* Subtle hover overlay with view prompt */}
                   <div className="absolute inset-0 bg-dark-blue/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
@@ -191,9 +202,10 @@ export default function Certificates() {
                 <Image
                   src={selectedCert.imageSrc}
                   alt={selectedCert.imageAlt}
-                  fill
+                  width={selectedCert.imageWidth}
+                  height={selectedCert.imageHeight}
                   sizes="(max-width: 640px) 92vw, (max-width: 1024px) 70vw, 512px"
-                  className="object-contain"
+                  className="absolute inset-0 h-full w-full object-contain"
                   priority
                 />
               </div>

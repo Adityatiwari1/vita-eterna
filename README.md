@@ -1,7 +1,7 @@
 # Vita Eterna — Luxury Aesthetic Clinic
 
 <div align="center">
-  <img src="public/logo.png" alt="Vita Eterna Logo" width="180" />
+  <img src="public/vita-eterna-logo.png" alt="Vita Eterna Logo" width="180" />
   <p><strong>Doctor-Led Timeless Aesthetics • Founded by Dr. Rishi</strong></p>
   <p><em>Rooted in clinical excellence, bespoke facial harmonisation, and medical-grade skin rejuvenation.</em></p>
 </div>
@@ -47,7 +47,7 @@
 ```
 vita-eterna/
 ├── public/
-│   ├── logo.png                # Official Infinity Lotus emblem
+│   ├── vita-eterna-logo.png                # Official Infinity Lotus emblem
 │   ├── favicon.ico             # Custom clinic browser favicon
 │   └── icon.png                # High-res app icon
 ├── src/

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | Vita Eterna Aesthetics",
   },
   description:
-    "Doctor led luxury medical aesthetics by Dr Rishi at Vita Eterna, located within Healthmaxx Hospital, Kharar. Expert facial balancing, Botox, dermal fillers, medical microneedling, skin boosters, thread lifts, and IV therapy.",
+    "Doctor led medical aesthetics by Dr Rishi in Kharar. Facial balancing, Botox, fillers, skin boosters and IV therapy at Healthmaxx Hospital.",
   keywords: [
     "Vita Eterna",
     "Dr Rishi",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.png",
+        url: "/vita-eterna-logo.png",
         width: 800,
         height: 500,
         alt: "Vita Eterna Doctor Led Aesthetics",
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     title: "Vita Eterna | Doctor Led Elegant Timeless Aesthetics",
     description:
       "Doctor led medical aesthetics by Dr Rishi. Facial harmonisation, skin rejuvenation, and luxury clinical care.",
-    images: ["/logo.png"],
+    images: ["/vita-eterna-logo.png"],
   },
   robots: {
     index: true,
@@ -91,7 +91,6 @@ export const metadata: Metadata = {
       follow: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
-      "max-snippet": -1,
     },
   },
   icons: {
@@ -109,7 +108,7 @@ const jsonLd = {
   "@type": ["MedicalBusiness", "Physician"],
   name: "Vita Eterna Aesthetics",
   alternateName: "Vita Eterna by Dr Rishi",
-  image: "https://vitaeterna.com/logo.png",
+  image: "https://vitaeterna.com/vita-eterna-logo.png",
   url: "https://vitaeterna.com",
   telephone: "+91 95177 36935",
   email: "support@heallthmaxx.com",
@@ -172,12 +171,19 @@ export default function RootLayout({
       className={`${parisienne.variable} ${poppins.variable} scroll-smooth`}
     >
       <head>
+        <link rel="llms-txt" href="/llms.txt" type="text/plain" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="min-h-full bg-beige text-dark-blue font-body antialiased selection:bg-pink/30 selection:text-dark-blue">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-dark-blue focus:px-5 focus:py-2.5 focus:text-xs focus:font-semibold focus:uppercase focus:tracking-[0.15em] focus:text-beige"
+        >
+          Skip to main content
+        </a>
         {children}
       </body>
     </html>

@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="overflow-hidden">
+      <main id="main" className="overflow-hidden">
         <Hero />
         <InfoStrip />
         <DoctorProfile />

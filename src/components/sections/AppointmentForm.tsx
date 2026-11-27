@@ -187,12 +187,12 @@ export default function AppointmentForm() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 w-full min-w-0">
               <div className="min-w-0 w-full">
-                <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-brown truncate">
+                <label htmlFor="firstName" className="block text-xs font-semibold uppercase tracking-[0.18em] text-brown truncate">
                   First Name *
                 </label>
                 <input
                   type="text"
-                  name="firstName"
+                  id="firstName" name="firstName" autoComplete="given-name"
                   required
                   value={formData.firstName}
                   onChange={handleChange}
@@ -202,12 +202,12 @@ export default function AppointmentForm() {
               </div>
 
               <div className="min-w-0 w-full">
-                <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-brown truncate">
+                <label htmlFor="lastName" className="block text-xs font-semibold uppercase tracking-[0.18em] text-brown truncate">
                   Last Name
                 </label>
                 <input
                   type="text"
-                  name="lastName"
+                  id="lastName" name="lastName" autoComplete="family-name"
                   value={formData.lastName}
                   onChange={handleChange}
                   placeholder="e.g. Vance"
@@ -216,12 +216,12 @@ export default function AppointmentForm() {
               </div>
 
               <div className="min-w-0 w-full">
-                <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-brown truncate">
+                <label htmlFor="phone" className="block text-xs font-semibold uppercase tracking-[0.18em] text-brown truncate">
                   Phone Number *
                 </label>
                 <input
                   type="tel"
-                  name="phone"
+                  id="phone" name="phone" autoComplete="tel"
                   required
                   value={formData.phone}
                   onChange={handleChange}
@@ -231,12 +231,12 @@ export default function AppointmentForm() {
               </div>
 
               <div className="min-w-0 w-full">
-                <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-brown truncate">
+                <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-[0.18em] text-brown truncate">
                   Email Address *
                 </label>
                 <input
                   type="email"
-                  name="email"
+                  id="email" name="email" autoComplete="email"
                   required
                   value={formData.email}
                   onChange={handleChange}
@@ -276,12 +276,12 @@ export default function AppointmentForm() {
 
               {/* Patient Goal / Concern */}
               <div className="sm:col-span-2 min-w-0 w-full">
-                <label className="block text-xs font-semibold uppercase tracking-[0.18em] text-brown truncate">
+                <label htmlFor="concern" className="block text-xs font-semibold uppercase tracking-[0.18em] text-brown truncate">
                   Describe Your Goals or Concerns
                 </label>
                 <textarea
                   rows={3}
-                  name="concern"
+                  id="concern" name="concern" autoComplete="off"
                   value={formData.concern}
                   onChange={handleChange}
                   placeholder="Tell us what you would like to achieve or any questions you have for Dr Rishi..."
