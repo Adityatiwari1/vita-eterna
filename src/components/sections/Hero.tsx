@@ -17,12 +17,14 @@ export default function Hero() {
           </div>
           <div className="flex-shrink-0 pt-1 sm:pt-2 hero-animate-logo">
             <Image
-              src="/logo.png"
+              src="/vita-eterna-logo.png"
               alt="Vita Eterna Infinite Beauty"
               width={160}
               height={100}
+              sizes="(max-width: 640px) 70px, 120px"
               className="h-12 sm:h-16 md:h-20 w-auto object-contain transition-transform hover:scale-105"
               priority
+              fetchPriority="high"
             />
           </div>
         </div>
@@ -69,11 +71,12 @@ export default function Hero() {
           <div className="order-1 lg:order-2 relative lg:col-span-7 flex justify-center lg:justify-end lg:-mt-10 xl:-mt-14 lg:-ml-12 xl:-ml-16 z-0 hero-animate-image">
             <div className="relative w-full max-w-2xl lg:max-w-none">
               <Image
-                src="/hero-image.png"
+                src="/vita-eterna-aesthetic-treatments-hero.png"
                 alt="Vita Eterna Aesthetic Treatments"
-                width={3250}
-                height={2453}
+                width={1920}
+                height={1449}
                 priority
+                fetchPriority="high"
                 className="w-full h-auto object-contain select-none transition-transform duration-500 hover:scale-[1.005]"
                 sizes="(max-width: 640px) 95vw, (max-width: 1024px) 90vw, 650px"
               />

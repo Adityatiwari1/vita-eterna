@@ -5,11 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 const links = [
-  { label: "Philosophy", href: "#philosophy" },
-  { label: "Credentials", href: "#credentials" },
-  { label: "Treatments", href: "#services" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#appointment" },
+  { label: "Philosophy", href: "/#philosophy" },
+  { label: "Credentials", href: "/#credentials" },
+  { label: "Treatments", href: "/#services" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -20,14 +21,15 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6 py-2.5 sm:py-3">
         {/* Brand Logo */}
         <Link
-          href="#"
+          href="/"
           className="flex items-center transition-opacity hover:opacity-90 py-1"
         >
           <Image
-            src="/logo.png"
+            src="/vita-eterna-logo.png"
             alt="Vita Eterna Logo"
             width={120}
             height={70}
+            sizes="(max-width: 640px) 64px, 80px"
             className="h-11 sm:h-14 w-auto object-contain"
             priority
           />
@@ -49,7 +51,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center">
           <Link
-            href="#appointment"
+            href="/#appointment"
             className="inline-flex items-center justify-center rounded-full bg-dark-blue px-6 py-2.5 text-xs font-medium uppercase tracking-[0.15em] text-beige transition-all hover:bg-dark-blue/90 shadow-sm"
           >
             Book a Consultation
@@ -59,7 +61,7 @@ export default function Navbar() {
         {/* Mobile Controls */}
         <div className="flex items-center gap-2 md:hidden">
           <Link
-            href="#appointment"
+            href="/#appointment"
             className="inline-flex items-center justify-center rounded-full bg-dark-blue px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.15em] text-beige shadow-sm"
           >
             Book
@@ -99,7 +101,7 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       <div
         className={`md:hidden overflow-hidden border-t border-dark-blue/10 bg-beige/98 backdrop-blur-md transition-all duration-300 ease-in-out ${
-          mobileMenuOpen ? "max-h-96 opacity-100 py-6" : "max-h-0 opacity-0 py-0"
+          mobileMenuOpen ? "max-h-[32rem] opacity-100 py-6" : "max-h-0 opacity-0 py-0"
         }`}
       >
         <div className="flex flex-col space-y-4 px-6 text-center">
@@ -115,7 +117,7 @@ export default function Navbar() {
           ))}
           <div className="pt-2">
             <Link
-              href="#appointment"
+              href="/#appointment"
               onClick={() => setMobileMenuOpen(false)}
               className="inline-flex w-full items-center justify-center rounded-full bg-dark-blue py-3 text-xs font-semibold uppercase tracking-[0.18em] text-beige shadow-md"
             >

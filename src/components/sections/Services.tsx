@@ -9,6 +9,8 @@ type TreatmentCategory = {
   items: string[];
   imageSrc?: string;
   imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
 };
 
 const categories: TreatmentCategory[] = [
@@ -25,6 +27,8 @@ const categories: TreatmentCategory[] = [
       "Liquid Rhinoplasty",
     ],
     imageSrc: "/services/facial-balancing.png",
+    imageWidth: 1024,
+    imageHeight: 1024,
     imageAlt: "Facial Balancing & Harmonisation Treatments",
   },
   {
@@ -41,6 +45,8 @@ const categories: TreatmentCategory[] = [
       "IPL Photo Facial",
     ],
     imageSrc: "/services/skin-rejuvenation.png",
+    imageWidth: 1024,
+    imageHeight: 1024,
     imageAlt: "Skin Rejuvenation & Clinical Peels",
   },
   {
@@ -54,6 +60,8 @@ const categories: TreatmentCategory[] = [
       "Energy, Hydration & Immune Boost Formulations",
     ],
     imageSrc: "/services/iv-therapy.jpg",
+    imageWidth: 1280,
+    imageHeight: 1939,
     imageAlt: "IV Therapy & Wellness Lounge",
   },
   {
@@ -66,6 +74,8 @@ const categories: TreatmentCategory[] = [
       "Hair Loss Management, Hair PRP, GFC & Exosomes",
     ],
     imageSrc: "/services/hair-management.png",
+    imageWidth: 736,
+    imageHeight: 736,
     imageAlt: "Hair Management & PRP Therapy",
   },
 ];
@@ -134,9 +144,10 @@ export default function Services() {
                       <Image
                         src={category.imageSrc}
                         alt={category.imageAlt || category.title}
-                        fill
+                        width={category.imageWidth}
+                        height={category.imageHeight}
                         sizes="(max-width: 1024px) 100vw, 420px"
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-dark-blue/80 via-transparent to-transparent opacity-60" />
                       <span className="absolute bottom-3 left-4 text-xs font-medium text-beige/90 tracking-wide">
